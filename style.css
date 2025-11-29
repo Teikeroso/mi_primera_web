@@ -1,26 +1,28 @@
 /* Estilo general */
 body {
-    background-color: #f2f2f2;
+    background: linear-gradient(135deg, #74c0fc, #9775fa); /* De azul a morado */
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
 }
 
-/* Contenedor principal */
+/* Contenedor principal (tarjeta) */
 .container {
     max-width: 800px;
     margin: 0 auto;
-    background: rgb(255, 255, 255);
+    background: white;
     padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    animation: fadeIn 0.8s ease-in-out;
 }
 
 /* Título */
 h1 {
-    color: #333;
+    color: #4c4c4c;
     text-align: center;
     margin-bottom: 20px;
+    font-size: 32px;
 }
 
 /* Párrafos */
@@ -33,7 +35,20 @@ p {
 /* Línea decorativa */
 hr {
     border: 0;
-    height: 2px;
-    background: #ddd;
+    height: 3px;
+    background: linear-gradient(to right, #74c0fc, #9775fa);
+    border-radius: 5px;
     margin: 20px 0;
+}
+
+/* Animación suave al cargar */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
